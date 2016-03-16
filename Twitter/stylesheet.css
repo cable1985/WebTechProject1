@@ -11,14 +11,17 @@ img.pres{
 }
 
 h1{
-    color: aliceblue;
     margin-top: 15px;
     text-align: center;
-<<<<<<< HEAD
-    color: orangered;
-=======
     font-size: 300%;
     font-family: sans-serif;
+    
+    color: white;
+    text-shadow:
+   -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
     
 }
 
@@ -28,19 +31,12 @@ div{
 }
 
 #bird{
+    background: rgba(54, 25, 25, .5);
     width: 100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
->>>>>>> origin/master
+    padding: 15px
     
-}
-h3{
-    text-align: center;
-    color: blue;
-}
-
-body {
-    background-color: silver;
 }
