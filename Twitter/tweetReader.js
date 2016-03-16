@@ -1,3 +1,7 @@
+function myFunction() {
+    var term = document.getElementById("term");
+}
+
 (function() {
 	"use strict";
 	
@@ -9,7 +13,7 @@
 
 	client.stream(
 		"statuses/filter",
-		{"track": ["Cruz", "Ted Cruz", "Trump", "Donald Trump", "Sanders", "Bernie Sanders", "Clinton", "Hilary Clinton"]},
+		{"track": "Asheville"},
 		function(stream) {
 			stream.on("data", function(tweet) {
 				console.log(tweet.text);
