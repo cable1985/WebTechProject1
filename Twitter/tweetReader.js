@@ -13,7 +13,7 @@ function myFunction() {
 
 	client.stream(
 		"statuses/filter",
-		{"track": "Asheville"},
+		{"track": "cruz"},
 		function(stream) {
 			stream.on("data", function(tweet) {
 				console.log(tweet.text);
