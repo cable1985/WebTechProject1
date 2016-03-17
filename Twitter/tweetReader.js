@@ -9,7 +9,7 @@
 
 	client.stream(
 		"statuses/filter",
-		{"track": "cruz"},
+		{"track": "Clinton"},
 		function(stream) {
 			stream.on("data", function(tweet) {
 				console.log(tweet.text);
