@@ -11,7 +11,7 @@ img.pres{
 }
 
 h1{
-    margin-top: 15px;
+    margin-top: 0px;
     text-align: center;
     font-size: 300%;
     font-family: sans-serif;
@@ -41,6 +41,7 @@ a{
 }
 
 div{
+    padding-top: 10px;
     background: rgba(54, 25, 25, .5);
 }
 
