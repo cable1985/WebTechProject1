@@ -1,7 +1,3 @@
-function myFunction() {
-    var term = document.getElementById("term");
-}
-
 (function() {
 	"use strict";
 	
@@ -19,6 +15,5 @@ function myFunction() {
 				console.log(tweet.text);
 			});
 	});
-	//module.exports = Twitter;
-    
+	module.exports = Twitter;
 }());
