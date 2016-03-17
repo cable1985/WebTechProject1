@@ -17,12 +17,21 @@
 
 	    client = new Twitter(credentials);
         
+<<<<<<< HEAD
         app.get("/twitterstream", function (req, res) {  
             client.stream("statuses/filter", {"track": "cruz"},
                 function(stream){
                     stream.on("data", function(tweet) {
                         res.send(tweet.text);
                         console.log(tweet.text);
+=======
+    app.get("/twitterstream.json", function (req, res) {  
+        client.stream("statuses/filter", {"track": "cruz"},
+            function(stream){
+                stream.on("data", function(tweet) {
+                    console.log(tweet.text);    
+                    res.send(tweet.text);
+>>>>>>> origin/master
                     });
                 });
         });
