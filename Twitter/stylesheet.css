@@ -41,6 +41,7 @@ a{
 }
 
 div{
+    max-height: 80%;
     padding-top: 10px;
     background: rgba(54, 25, 25, .5);
 }
