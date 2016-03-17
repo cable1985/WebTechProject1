@@ -17,18 +17,15 @@
 
 	    client = new Twitter(credentials);
         
-    app.get("/twitterstream", function (req, res) {  
-        console.log('i got to get');
-        client.stream("statuses/filter", {"tracks": "cruz"},
-            function(stream){
-                console.log("stream started");
-                stream.on("data", function(tweet) {
-                    console.log(tweet.text);    
-                    //res.send(tweet.text);
+        app.get("/twitterstream", function (req, res) {  
+            client.stream("statuses/filter", {"track": "cruz"},
+                function(stream){
+                    stream.on("data", function(tweet) {
+                        res.send(tweet.text);
+                        console.log(tweet.text);
                     });
                 });
-        module.exports = Twitter;
-    });
-   };
+        });
+      };
     main();
 }());
