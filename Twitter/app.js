@@ -5,12 +5,10 @@ var main = function() {
     $("#tweetFeed").append("<p>" + content + "</p>");
    };
     
-    $.get("twitterstream.json", function(tweets) {
-        tweets.statuses.forEach(function(status) {
-            addToDom(status.text);
-            console.log(status.text);
-        });
-    });
+    $.get("twitterstream", function(tweets) {
+            addToDom(tweets);
+        });
+    
 };
 
 $(document).ready(main);
