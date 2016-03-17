@@ -1,12 +1,17 @@
 var main = function() {
     "use strict";
     
-   var insertIntoDom = function(tweets) {
-   $("p").text("cruz: " + tweets);
-   }
+   var addToDom =  function(content) {
+    $("#tweetFeed").append("<p>" + content + "</p>");
+   };
+    
     $.getJSON("/twitter.json", function(tweets) {
-        console.log(tweets);
+        tweets.statuses.forEach(function(status) {
+            addToDom(status.text);
+            console.log(status.text);
+        });
     });
-}
+};
+
 $(document).ready(main);
 

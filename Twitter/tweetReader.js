@@ -15,5 +15,5 @@
 				console.log(tweet.text);
 			});
 	});
-	module.exports = Twitter;
+	//module.exports = Twitter;
 }());
