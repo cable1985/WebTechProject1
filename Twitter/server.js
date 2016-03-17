@@ -17,12 +17,14 @@
 
 	    client = new Twitter(credentials);
         
-    app.get("/twitter.json", function (req, res) {  
+    app.get("/twitterstream", function (req, res) {  
+        console.log('i got to get');
         client.stream("statuses/filter", {"tracks": "cruz"},
             function(stream){
+                console.log("stream started");
                 stream.on("data", function(tweet) {
                     console.log(tweet.text);    
-                    res.json(tweets);
+                    //res.send(tweet.text);
                     });
                 });
         module.exports = Twitter;

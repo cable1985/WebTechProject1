@@ -5,7 +5,7 @@ var main = function() {
     $("#tweetFeed").append("<p>" + content + "</p>");
    };
     
-    $.getJSON("twitter.json", function(tweets) {
+    $.get("twitterstream", function(tweets) {
         tweets.statuses.forEach(function(status) {
             addToDom(status.text);
             console.log(status.text);
