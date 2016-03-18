@@ -7,7 +7,10 @@
         var express = require("express"),
         http = require("http"), 
         app = express();
+        //var bodyParser = require("body-parser");
         app.use(express.static(__dirname)); 
+        //app.use(bodyParser.urlEncoded({extended:false}));
+        //app.use(bodyParser.json());
         http.createServer(app).listen(3000);
         
         var Twitter = require("twitter"),
@@ -26,7 +29,7 @@
                         if (!send) {
                         resString += tweet.text; + "\n";
                         counter++;
-                            if (counter > 20) {
+                            if (counter > 10) {
                                 send = 1;
                                 res.send(resString);
                             }
