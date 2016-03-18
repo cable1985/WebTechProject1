@@ -27,7 +27,7 @@
                     var send = 0;
                     stream.on("data", function(tweet) {
                         if (!send) {
-                        resString += tweet.text; + "\n";
+                        resString += tweet.text + "\n";
                         counter++;
                             if (counter > 20) {
                                 send = 1;
