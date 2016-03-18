@@ -7,10 +7,7 @@
         var express = require("express"),
         http = require("http"), 
         app = express();
-        //var bodyParser = require("body-parser");
         app.use(express.static(__dirname)); 
-        //app.use(bodyParser.urlEncoded({extended:false}));
-        //app.use(bodyParser.json());
         http.createServer(app).listen(3000);
         
         var Twitter = require("twitter"),
@@ -19,9 +16,8 @@
 
 	    client = new Twitter(credentials);
         
-        app.get("/twitterstream", function (req, res) {  
-            console.log(req.body);
-            client.stream("statuses/filter", {"track":"cruz"},
+        app.get("/twitterstream2", function (req, res) { 
+            client.stream("statuses/filter", {"track": "clinton"},
                 function(stream){
                     var counter = 0;
                     var resString = "";
