@@ -3,6 +3,10 @@ var main = function() {
     
    var addToDom =  function(content) {
     $("#CruztweetFeed").append("<p>" + content + "</p>");
+    //$("#CruztweetFeed").append("<p>" + content + "</p>");
+    //$("#CruztweetFeed").append("<p>" + content + "</p>");
+    //$("#CruztweetFeed").append("<p>" + content + "</p>");
+    //$("#CruztweetFeed").append("<p>" + content + "</p>");
    };
     
     $.get("twitterstream", function(tweets) {
