@@ -9,8 +9,6 @@
         app = express();
         //var bodyParser = require("body-parser");
         app.use(express.static(__dirname)); 
-        //app.use(bodyParser.urlEncoded({extended:false}));
-        //app.use(bodyParser.json());
         http.createServer(app).listen(3000);
         
         var Twitter = require("twitter"),

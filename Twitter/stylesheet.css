@@ -23,6 +23,13 @@ h1{
      2px 2px 0 #000;   
 }
 
+h2{
+    margin-top: 0px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+}
+
 a{
     text-decoration: none;
 }
@@ -47,6 +54,7 @@ div{
     padding-top: 10px;
     background: rgba(0, 0, 0, .5);
 }
+
 
 #bird{
     background: rgba(54, 25, 25, .5);
