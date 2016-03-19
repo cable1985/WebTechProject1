@@ -4,26 +4,12 @@
     <title>Search Something</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
     </head>
-    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $("#submit").on("click",function(event){
-          var search=$("#keyword").val();
-         $.get("/twitterstream6?q=" + search, function(tweets){
-            addToDom5(tweets);
-        });
-        });
-          var addToDom5 =  function(content) {
-                $("#SearchtweetFeed").append("<p>" + content + "</p>");
-          };
-      });
-        
-    </script>
+    
     
     <body>
         <a href="index.html"><p id="home">Home</p></a>
        <div>    
-        <h1>SEARCH SOMETHING ELSE</h1>
+        <h1>Type another Word or Name</h1>
     
     </div>   
         
@@ -33,6 +19,8 @@
         </div>
         
         <img src="images/twitter.png" id=bird>
-    
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="/client.js"></script>
     </body>
+    
 </html>

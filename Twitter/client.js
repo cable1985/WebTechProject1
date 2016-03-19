@@ -44,6 +44,17 @@ var main = function() {
     $.get("twitterstream5", function(tweets) {
             addToDom5(tweets);
         });
+    
+    //Search
+    $("#submit").on("click",function(event){
+          var search=$("#keyword").val();
+         $.get("/twitterstream6?q=" + search, function(tweets){
+            addToDom5(tweets);
+        });
+    });
+          var addToDom5 =  function(content) {
+                $("#SearchtweetFeed").append("<p>" + content + "</p>");
+          };
  }
 
 $(document).ready(main);
