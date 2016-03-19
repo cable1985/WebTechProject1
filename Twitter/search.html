@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    <title>Search Something</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#submit").on("click",function(event){
+          var search=$("#keyword").val();
+         $.get("/twitterstream6?q=" + search, function(tweets){
+            addToDom5(tweets);
+        });
+          var addToDom5 =  function(content) {
+                $("#SearchtweetFeed").append("<p>" + content + "</p>");
+          };
+      });
+    </script>
+    
+    <body>
+        <a href="index.html"><p id="home">Home</p></a>
+       <div>    
+        <h1>SEARCH SOMETHING ELSE</h1>
+    
+    </div>   
+        
+        <div id="SearchtweetFeed">
+            <input type="text" name="keyWord" id="keyword"><br>
+            <button id="submit">Search</button>
+        </div>
+        
+        <img src="images/twitter.png" id=bird>
+    
+    </body>
+</html>

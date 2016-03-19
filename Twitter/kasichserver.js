@@ -16,7 +16,7 @@
 
 	    client = new Twitter(credentials);
         
-        app.get("/twitterstream4", function (req, res) { 
+        app.get("/twitterstream3", function (req, res) { 
             client.stream("statuses/filter", {"track": "kasich"},
                 function(stream){
                     var counter = 0;
@@ -24,9 +24,9 @@
                     var send = 0;
                     stream.on("data", function(tweet) {
                         if (!send) {
-                        resString += tweet.text; + "\n";
+                        resString += tweet.text + "\n";
                         counter++;
-                            if (counter > 20) {
+                            if (counter > 10) {
                                 send = 1;
                                 res.send(resString);
                             }

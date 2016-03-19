@@ -44,8 +44,7 @@ var main = function() {
     $.get("twitterstream5", function(tweets) {
             addToDom5(tweets);
         });
-    
-};
+ }
 
 $(document).ready(main);
 
