@@ -49,10 +49,10 @@ var main = function() {
     $("#submit").on("click",function(event){
           var search=$("#keyword").val();
          $.get("/twitterstream6?q=" + search, function(tweets){
-            addToDom5(tweets);
+            addToDom6(tweets);
         });
     });
-          var addToDom5 =  function(content) {
+          var addToDom6 =  function(content) {
                 $("#SearchtweetFeed").append("<p>" + content + "</p>");
           };
  }

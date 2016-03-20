@@ -13,8 +13,10 @@
 			credentials = require("./credentials.json"),
 			client;
 
-	    client = new Twitter(credentials);
+	    client  = new Twitter(credentials);
         
+        
+        //search
         app.get("/twitterstream6", function (req, res) {
             var search = req.query.q;
             client.stream("statuses/filter", {"track": search},
@@ -24,7 +26,7 @@
                     var send = 0;
                     stream.on("data", function(tweet) {
                         if (!send) {
-                        resString += tweet.text + "\n";
+                        resString += tweet.text + "<br><br>";
                         counter++;
                             if (counter > 10) {
                                 send = 1;
