@@ -28,7 +28,7 @@
                         if (!send) {
                         resString += tweet.text + "<br><br>";
                         counter++;
-                            if (counter > 10) {
+                            if (counter > 20) {
                                 send = 1;
                                 res.send(resString);
                             }
