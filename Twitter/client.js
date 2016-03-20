@@ -1,54 +1,69 @@
 var main = function() {
     "use strict";
-    
+    //Cruz    
    var addToDom =  function(content) {
     $("#CruztweetFeed").append("<p>" + content + "</p>");
-   };
+    };
     
-    $.get("twitterstream", function(tweets) {
-            addToDom(tweets);
+    $("#submit2").on("click",function(event){
+          var search=("cruz");
+        $.get("/twitterstream?q=" + search, function(tweets){
+            addToDom(tweets);
         });
+    });
     
     //Clinton
     var addToDom2 =  function(content) {
     $("#ClintontweetFeed").append("<p>" + content + "</p>");
-   };
+    };
     
-    $.get("twitterstream2", function(tweets) {
-            addToDom2(tweets);
+    $("#submit3").on("click",function(event){
+          var search=("clinton");
+        $.get("/twitterstream?q=" + search, function(tweets){
+            addToDom2(tweets);
         });
+    });
     
     //Kasich
     var addToDom3 =  function(content) {
     $("#KasichtweetFeed").append("<p>" + content + "</p>");
-   };
+    };
     
-    $.get("twitterstream3", function(tweets) {
-            addToDom3(tweets);
+    $("#submit4").on("click",function(event){
+          var search=("kasich");
+        $.get("/twitterstream?q=" + search, function(tweets){
+            addToDom3(tweets);
         });
+    });
     
     //Sanders
     var addToDom4 =  function(content) {
     $("#SanderstweetFeed").append("<p>" + content + "</p>");
-   };
+    };
     
-    $.get("twitterstream4", function(tweets) {
-            addToDom4(tweets);
+    $("#submit5").on("click",function(event){
+          var search=("sanders");
+         $.get("/twitterstream?q=" + search, function(tweets){
+            addToDom4(tweets);
         });
+    });
     
     //Trump
     var addToDom5 =  function(content) {
     $("#TrumptweetFeed").append("<p>" + content + "</p>");
-   };
+    };
     
-    $.get("twitterstream5", function(tweets) {
-            addToDom5(tweets);
+    $("#submit6").on("click",function(event){
+          var search=("trump");
+        $.get("/twitterstream?q=" + search, function(tweets){
+            addToDom5(tweets);
         });
+    });
     
-    //Search
+    //Search anything
     $("#submit").on("click",function(event){
           var search=$("#keyword").val();
-         $.get("/twitterstream6?q=" + search, function(tweets){
+        $.get("/twitterstream?q=" + search, function(tweets){
             addToDom6(tweets);
         });
     });
